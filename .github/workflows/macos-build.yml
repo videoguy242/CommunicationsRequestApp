@@ -29,7 +29,7 @@ jobs:
         zip -r ../CommunicationsRequestApp-mac.zip CommunicationsRequestApp.app
 
     - name: Upload the macOS App
-      uses: actions/upload-artifact@v3.1.3
+      uses: actions/upload-artifact@v4
       with:
         name: macOS-App
         path: CommunicationsRequestApp-mac.zip
