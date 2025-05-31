@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Communications Service Request</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <img src="assets/moh-logo.png" alt="Ministry of Health & Wellness Bahamas Logo" class="logo" />
+    <h1>Communications Service Request</h1>
+    <form id="requestForm">
+      <label for="currentDate">Date:</label>
+      <input type="text" id="currentDate" name="currentDate" readonly />
+
+      <label for="requestName">Request Name:</label>
+      <input type="text" id="requestName" name="requestName" required />
+
+      <label for="serviceDate">Requested Service Date & Time:</label>
+      <input type="datetime-local" id="serviceDate" name="serviceDate" required />
+
+      <label for="yourName">Your Name:</label>
+      <input type="text" id="yourName" name="yourName" required />
+
+      <label for="department">Department:</label>
+      <input type="text" id="department" name="department" required />
+
+      <fieldset>
+        <legend>Requested Services:</legend>
+        <div class="checkboxes">
+          <label><input type="checkbox" name="services" value="Photo Capture" /> Photo Capture</label>
+          <label><input type="checkbox" name="services" value="Video Coverage" /> Video Coverage</label>
+          <label><input type="checkbox" name="services" value="Edited Video" /> Edited Video</label>
+          <label><input type="checkbox" name="services" value="Segment Taping" /> Segment Taping</label>
+          <label><input type="checkbox" name="services" value="PSA" /> PSA</label>
+          <label><input type="checkbox" name="services" value="Press Release" /> Press Release</label>
+          <label><input type="checkbox" name="services" value="Marketing Materials" /> Marketing Materials</label>
+          <label><input type="checkbox" name="services" value="Printing" /> Printing</label>
+          <label><input type="checkbox" name="services" value="Venue Setup" /> Venue Setup</label>
+          <label><input type="checkbox" name="services" value="Live Broadcast" /> Live Broadcast</label>
+          <label><input type="checkbox" name="services" value="Press Invite" /> Press Invite</label>
+        </div>
+      </fieldset>
+
+      <label for="additionalInfo">Additional Information:</label>
+      <textarea id="additionalInfo" name="additionalInfo" rows="4"></textarea>
+
+      <button type="submit" class="submit-btn">Submit Request</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

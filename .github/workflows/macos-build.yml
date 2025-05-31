@@ -1,0 +1,32 @@
+name: Build macOS App
+
+on:
+  push:
+    branches: [ master ]
+  workflow_dispatch:
+
+jobs:
+  build-macos:
+    runs-on: macos-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '20'
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Package app for macOS
+      run: |
+        npx electron-packager . CommunicationsRequestApp --platform=darwin --arch=universal --icon=assets/moh-logo.icns --overwrite
+
+    - name: Upload macOS .app bundle
+      uses: actions/upload-artifact@v3
+      with:
+        name: macOS-App
+        path: CommunicationsRequestApp-darwin-universal/CommunicationsRequestApp.app

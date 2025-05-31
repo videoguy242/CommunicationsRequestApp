@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Thank You</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .thankyou-container {
+      max-width: 600px;
+      margin: 100px auto;
+      text-align: center;
+      padding: 40px;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 0 25px rgba(0,0,0,0.05);
+    }
+
+    .thankyou-container h1 {
+      font-size: 2.5em;
+      color: #1e4ba0;
+      margin-bottom: 20px;
+    }
+
+    .thankyou-container p {
+      font-size: 1.2em;
+      color: #555;
+    }
+
+    .thankyou-container .back-button {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 12px 25px;
+      background: rgba(30, 75, 160, 0.9);
+      color: white;
+      border: none;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 8px 20px rgba(30, 75, 160, 0.25);
+      transition: all 0.3s ease;
+    }
+
+    .thankyou-container .back-button:hover {
+      background: rgba(30, 75, 160, 1);
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <div class="thankyou-container">
+    <h1>Thank You!</h1>
+    <p>Your service request has been successfully submitted.<br>
+       You can now email the generated folder to the appropriate providers.</p>
+    <a class="back-button" href="index.html">Submit Another Request</a>
+  </div>
+</body>
+</html>
